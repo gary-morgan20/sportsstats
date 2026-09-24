@@ -18,3 +18,12 @@
 "SC Braga": "Sp Braga"
 "Inter Milan": "Inter"
 "AC Milan": "Milan"
+# National teams (international results dataset spellings)
+"Ireland": "Republic of Ireland"
+"Rep. of Ireland": "Republic of Ireland"
+"Türkiye": "Turkey"
+"Turkiye": "Turkey"
+"Czechia": "Czech Republic"
+"Bosnia & Herzegovina": "Bosnia and Herzegovina"
+"Bosnia-Herzegovina": "Bosnia and Herzegovina"
+"FYR Macedonia": "North Macedonia"

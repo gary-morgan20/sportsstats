@@ -49,10 +49,14 @@ class TeamMatcher:
         n = norm(name)
         if n in self.by_norm:
             return self.by_norm[n]
-        # one name contained in the other ("psg" / "paris sg")
-        for k_norm, k in self.by_norm.items():
-            if n and k_norm and (n in k_norm or k_norm in n):
-                return k
+        # one name contained in the other ("psg" / "paris sg") - only if that points to exactly one team,
+        # so "Ireland" can never be matched to "Northern Ireland" by accident
+        hits = {k for k_norm, k in self.by_norm.items() if n and k_norm and (n in k_norm or k_norm in n)}
+        if len(hits) == 1:
+            return hits.pop()
+        if len(hits) > 1:
+            self.unmatched.add(name)
+            return None
         close = difflib.get_close_matches(n, list(self.by_norm), n=1, cutoff=0.75)
         if close:
             return self.by_norm[close[0]]

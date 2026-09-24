@@ -129,7 +129,7 @@ def render(result: dict, cfg: dict, archive: list[str]) -> str:
 @media (prefers-color-scheme:dark){{:root{{--bg:#131412;--card:#1c1d1b;--ink:#ecebe6;--mute:#9a9a93;--line:#2e2f2c;--acc:#4cc27c;--accbg:#173222;--warn:#e0a84a;--warnbg:#33290f}}}}
 *{{box-sizing:border-box}} body{{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}}
 main{{max-width:1100px;margin:0 auto;padding:20px 16px 60px}}
-header h1{{margin:0;font-size:24px}} header p{{margin:4px 0 0;color:var(--mute);font-size:13px}}
+header h1{{margin:0;font-size:24px}} .src{{font-size:12px}} header p{{margin:4px 0 0;color:var(--mute);font-size:13px}}
 .stats{{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}}
 .stat{{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:120px}}
 .stat b{{display:block;font-size:22px}} .stat span{{color:var(--mute);font-size:12px}}
@@ -162,7 +162,8 @@ th,td{{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left;white
 details.info{{margin-top:28px;color:var(--mute);font-size:13px}}
 </style></head><body><main>
 <header><h1>{e(title)} · {e(datetime.strptime(result['date'], '%Y-%m-%d').strftime('%A %d %B %Y'))}</h1>
-<p>Updated {e(gen)} UTC · kick-offs in Paris time · next {cfg['site']['days_ahead']} days of fixtures</p></header>
+<p>Updated {e(gen)} UTC · kick-offs in Paris time · next {cfg['site']['days_ahead']} days of fixtures</p>
+<p class="src">{src}</p></header>
 <div class="stats">
 <div class="stat"><b>{len(picks)}</b><span>value picks</span></div>
 <div class="stat"><b>{result['matches']}</b><span>matches analysed</span></div>

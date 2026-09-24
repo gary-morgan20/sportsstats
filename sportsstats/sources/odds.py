@@ -36,9 +36,10 @@ def _save_raw(name: str, payload) -> None:
 # ---------------------------------------------------------------- football-data fixtures.csv
 # UK bookmakers use the same keys as The Odds API so prices from both sources line up.
 # Pinnacle, bwin etc. are non-UK: they feed the market average but never count as "best odds".
-FD_BOOKS = {"B365": "bet365", "WH": "williamhill", "SK": "skybet", "LB": "ladbrokes_uk", "CL": "coral",
-            "BV": "betvictor", "VC": "betvictor", "BF": "betfair_sb_uk", "BFE": "betfair_ex_uk",
-            "BW": "bwin", "IW": "interwetten", "PS": "pinnacle", "1XB": "1xbet", "BMGM": "betmgm"}
+# Column prefixes as used in football-data files from 2026/27 (older files use WH, LB, PS ... - kept too).
+FD_BOOKS = {"B365": "bet365", "BFD": "betfred_uk", "BV": "betvictor", "PP": "paddypower", "SKB": "skybet",
+            "BFE": "betfair_ex_uk", "WH": "williamhill", "LB": "ladbrokes_uk", "CL": "coral", "SK": "skybet",
+            "BW": "bwin", "IW": "interwetten", "PS": "pinnacle", "1XB": "1xbet"}
 FD_OU = {"B365": "bet365", "BFE": "betfair_ex_uk", "BV": "betvictor", "P": "pinnacle", "1XB": "1xbet"}
 
 
@@ -81,11 +82,17 @@ class OddsAPI:
         self.remaining = r.headers.get("x-requests-remaining", self.remaining)
         if r.status_code == 422:  # market not offered for this sport
             return []
-        r.raise_for_status()
+        if r.status_code >= 400:
+            raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
         return r.json()
 
-    def featured(self, sport: str):
-        return self._get(f"/sports/{sport}/odds", regions=self.regions, markets=",".join(self.FEATURED))
+    def featured(self, sport: str, start: str | None = None, end: str | None = None):
+        """Match result + totals. Only matches kicking off between start and end are requested, and
+        The Odds API charges nothing when no matches come back, so quiet leagues cost 0 credits."""
+        window = {}
+        if start and end:
+            window = {"commenceTimeFrom": f"{start}T00:00:00Z", "commenceTimeTo": f"{end}T23:59:59Z"}
+        return self._get(f"/sports/{sport}/odds", regions=self.regions, markets=",".join(self.FEATURED), **window)
 
     def event(self, sport: str, event_id: str, markets: list[str] | None = None):
         return self._get(f"/sports/{sport}/events/{event_id}/odds", regions=self.regions,
@@ -158,7 +165,8 @@ class APIFootball:
     def _get(self, path: str, **params):
         r = requests.get(f"{self.BASE}{path}", params=params, headers={"x-apisports-key": self.key}, timeout=30)
         self.remaining = r.headers.get("x-ratelimit-requests-remaining", self.remaining)
-        r.raise_for_status()
+        if r.status_code >= 400:
+            raise RuntimeError(f"HTTP {r.status_code}: {r.text[:200]}")
         data = r.json()
         if data.get("errors"):
             raise RuntimeError(f"API-Football {path}: {data['errors']}")

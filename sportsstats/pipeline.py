@@ -8,6 +8,7 @@ import pandas as pd
 from .config import api_key
 from .model import LeagueModels
 from .sources import football_data as fd
+from .sources import international as intl
 from .sources.odds import APIFootball, OddsAPI, from_football_data
 from .teams import TeamMatcher
 from .value import find_value
@@ -18,43 +19,61 @@ def collect_offers(cfg, leagues, start, end, extra: bool, log=print) -> tuple[pd
     fd_map = {v["fd"]: k for k, v in cfg["leagues"].items() if v.get("fd") and k in leagues}
 
     try:
-        frames.append(from_football_data(fd.load_fixtures(), fd_map))
-        status["football-data"] = "ok"
+        f = from_football_data(fd.load_fixtures(), fd_map)
+        in_window = f[(f["kickoff"].str[:10] >= start) & (f["kickoff"].str[:10] <= end)]
+        frames.append(f)
+        status["football-data"] = f"ok, {in_window[['home_src', 'away_src']].drop_duplicates().shape[0]} matches in window"
     except Exception as e:  # noqa: BLE001
         status["football-data"] = f"failed: {e}"
     log(f"football-data fixtures: {status['football-data']}")
 
     if key := api_key("ODDS_API_KEY"):
         api = OddsAPI(key, cfg["odds"]["odds_api_regions"])
-        reserve = cfg["odds"].get("odds_api_reserve_credits", 50)
+        reserve = cfg["odds"].get("odds_api_reserve_credits", 20)
+        extra = extra and cfg["odds"].get("odds_api_extra_markets", False)
+        errors, n_events = [], 0
+
+        def low() -> bool:
+            return api.remaining is not None and float(api.remaining) < reserve
+
         for lg in leagues:
+            if low():
+                errors.append("credit reserve reached, stopped early")
+                break
             sport = cfg["leagues"][lg]["odds_api"]
             try:
-                events = [e for e in api.featured(sport) if start <= e["commence_time"][:10] <= end]
+                events = api.featured(sport, start, end)
+                n_events += len(events)
                 frames.append(OddsAPI.parse(lg, events))
                 for ev in events if extra else []:
-                    if api.remaining is not None and float(api.remaining) < reserve:
-                        log("  The Odds API: credit reserve reached, skipping extra markets")
-                        extra = False
+                    if low():
                         break
                     frames.append(OddsAPI.parse(lg, api.event(sport, ev["id"])))
             except Exception as e:  # noqa: BLE001
+                errors.append(f"{lg}: {e}")
                 log(f"  The Odds API {lg}: {e}")
-        status["the-odds-api"] = f"ok, {api.remaining} credits left"
+        status["the-odds-api"] = f"{n_events} matches, {api.remaining} credits left" + \
+            (f" | errors: {'; '.join(errors[:3])}" if errors else "")
         log(f"The Odds API: {status['the-odds-api']}")
 
     if key := api_key("API_FOOTBALL_KEY"):
         af = APIFootball(key)
         season = int("20" + cfg["history"]["current_season"][:2])
+        errors, n_fx = [], 0
         for lg in leagues:
             lid = cfg["leagues"][lg]["api_football"]
             try:
                 fx = af.fixtures(lid, season, start, end)
+                n_fx += len(fx)
                 if fx:
                     frames.append(af.parse(lg, af.odds(lid, season), fx))
             except Exception as e:  # noqa: BLE001
+                errors.append(f"{lg}: {e}")
                 log(f"  API-Football {lg}: {e}")
-        status["api-football"] = f"ok, {af.remaining} requests left today"
+                if len(errors) >= 2 and all(str(x).split(": ", 1)[1] == str(e) for x in errors):
+                    break  # same error every time (e.g. plan restriction) - don't waste requests
+        status["api-football"] = f"{n_fx} matches, {af.remaining} requests left today" + \
+            (f" | error: {errors[0]}" if errors else "")
         log(f"API-Football: {status['api-football']}")
 
     frames = [f for f in frames if not f.empty]
@@ -78,13 +97,17 @@ def analyse(cfg, leagues=None, days=3, extra=True, log=print) -> dict:
         lo = offers[offers["league"] == lg].copy()
         if lo.empty:
             continue
-        code = cfg["leagues"][lg].get("fd")
-        if not code:
-            result["skipped"].append(f"{cfg['leagues'][lg]['name']}: no statistical history source yet")
-            continue
+        L = cfg["leagues"][lg]
+        half_life = L.get("half_life_days", h["decay_half_life_days"])
         log(f"{lg}: fitting models")
-        models = LeagueModels.build(fd.load_results(code, h["current_season"], h["seasons_back"]),
-                                    h["decay_half_life_days"])
+        if L.get("history") == "international":
+            hist = intl.load_results()
+        elif L.get("fd"):
+            hist = fd.load_results(L["fd"], h["current_season"], h["seasons_back"])
+        else:
+            result["skipped"].append(f"{L['name']}: no statistical history source yet")
+            continue
+        models = LeagueModels.build(hist, half_life)
         if not models.ft:
             continue
         tm = TeamMatcher(models.ft.teams)

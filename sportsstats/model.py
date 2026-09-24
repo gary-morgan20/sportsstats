@@ -65,6 +65,10 @@ def fit(df: pd.DataFrame, home_col: str, away_col: str, half_life_days: float,
     ag = df[away_col].to_numpy(dtype=float)
     age = (as_of - df["Date"]).dt.days.to_numpy(dtype=float)
     w = 0.5 ** (age / half_life_days)
+    if "Weight" in df:  # e.g. friendlies count less
+        w = w * df["Weight"].to_numpy(dtype=float)
+    # no home advantage at neutral venues (internationals)
+    at_home = 1.0 - df["Neutral"].to_numpy(dtype=float) if "Neutral" in df else np.ones(len(df))
 
     def unpack(p):
         att = np.append(p[: n - 1], -p[: n - 1].sum())  # attacks sum to zero
@@ -73,7 +77,7 @@ def fit(df: pd.DataFrame, home_col: str, away_col: str, half_life_days: float,
 
     def nll(p):
         att, dfn, home, rho = unpack(p)
-        lh = np.exp(home + att[h] + dfn[a])
+        lh = np.exp(home * at_home + att[h] + dfn[a])
         la = np.exp(att[a] + dfn[h])
         ll = poisson.logpmf(hg, lh) + poisson.logpmf(ag, la)
         if dixon_coles:

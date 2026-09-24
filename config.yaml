@@ -17,6 +17,10 @@ leagues:
   SERIEA:       {name: "Italy Serie A",          fd: I1,  odds_api: soccer_italy_serie_a,          api_football: 135}
   PORTUGAL:     {name: "Portugal Liga Portugal", fd: P1,  odds_api: soccer_portugal_primeira_liga, api_football: 94}
   EREDIVISIE:   {name: "Dutch Eredivisie",       fd: N1,  odds_api: soccer_netherlands_eredivisie, api_football: 88}
+  # National teams: history from international results (full-time scores only, so no
+  # first-half or corners model). Longer half-life because countries play far fewer matches.
+  NATIONS:      {name: "UEFA Nations League",    fd: null, history: international, half_life_days: 540,
+                 odds_api: soccer_uefa_nations_league, api_football: 5}
 
 markets:
   - home_win
@@ -38,7 +42,10 @@ history:
 odds:
   # UK prices only (what Oddschecker shows). Each extra region multiplies The Odds API credit use.
   odds_api_regions: [uk]
-  odds_api_reserve_credits: 50   # stop fetching extra markets when this few credits remain
+  odds_api_reserve_credits: 20   # stop calling The Odds API when this few credits remain this month
+  # Extra markets (BTTS, DNB, double chance, 1st half, corners) cost ~5-7 credits per match.
+  # Leave false on the free 500-credit plan; set true on a paid plan.
+  odds_api_extra_markets: false
   # Bookmakers whose prices count as "best odds". Remove any you don't have an account with.
   my_bookmakers: [betfair_ex_uk, bet365, williamhill, skybet, paddypower, ladbrokes_uk, coral,
                   betfred_uk, betvictor, sport888, betway, boylesports, unibet_uk, betfair_sb_uk,
