@@ -52,10 +52,25 @@ def e(x) -> str:
 
 def _kick(k: str) -> str:
     try:
-        d = datetime.strptime(k[:16], "%Y-%m-%d %H:%M")
-        return d.strftime("%a %d %b %H:%M")
+        return datetime.strptime(k[:16], "%Y-%m-%d %H:%M").strftime("%H:%M")
     except ValueError:
-        return k[:10]
+        return ""
+
+
+def _day_label(day: str, today: str) -> str:
+    d = datetime.strptime(day, "%Y-%m-%d")
+    rel = {0: "Today · ", 1: "Tomorrow · "}.get((d - datetime.strptime(today, "%Y-%m-%d")).days, "")
+    return rel + d.strftime("%A %d %B")
+
+
+def _by_day(df: pd.DataFrame, today: str, render_rows, wrap_cls: str) -> str:
+    """One section per date (header), rows inside ordered by kick-off time."""
+    out = []
+    df = df.assign(_day=df["kickoff"].str[:10])
+    for day, g in df.groupby("_day", sort=True):
+        out.append(f'<section class="day"><h3 class="dayh">{e(_day_label(day, today))}</h3>'
+                   f'<div class="{wrap_cls}">{render_rows(g)}</div></section>')
+    return "".join(out)
 
 
 def _net(r) -> str:
@@ -89,7 +104,7 @@ def _match_block(g: pd.DataFrame) -> str:
                     f"<td class=n>{r['fair_odds']:.2f}</td><td class=n>{r['best_odds']:.2f}</td>"
                     f"<td>{e(book(r['bookmaker']))}</td><td class=n>{r['edge']:+.0%}</td></tr>")
     return f"""<details class="match" data-league="{e(first['league'])}">
-<summary><span class="ko">{e(_kick(first['kickoff']))}</span><span class="teams">{e(first['match'])}</span>
+<summary><span class="ko">{e(_kick(first['kickoff']))}</span><span class="lgt">{e(first['league'])}</span><span class="teams">{e(first['match'])}</span>
 <span class="xg">xG {e(first['xg'])}</span>{badge}</summary>
 <div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
 <th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody>{''.join(rows)}</tbody></table></div></details>"""
@@ -105,17 +120,19 @@ def render(result: dict, cfg: dict, archive: list[str]) -> str:
     leagues = sorted(t["league"].unique()) if has else []
     names = {k: L["name"] for k, L in cfg["leagues"].items()}
 
-    pick_html = "".join(_pick_card(r) for _, r in picks.iterrows()) or \
+    today = result["date"]
+
+    def cards(cls=""):
+        return lambda g: "".join(_pick_card(r, cls) for _, r in
+                                 g.sort_values(["kickoff", "match", "edge"], ascending=[True, True, False]).iterrows())
+
+    pick_html = _by_day(picks, today, cards(), "grid") or \
         '<p class="empty">No selections met the value threshold today.</p>'
-    check_html = "".join(_pick_card(r, "chk") for _, r in checks.iterrows()) or '<p class="empty">None.</p>'
-    match_html = ""
-    if has:
-        for lg in leagues:
-            lt = t[t["league"] == lg]
-            blocks = "".join(_match_block(g) for _, g in lt.groupby(["kickoff", "match"], sort=True))
-            match_html += f'<section class="league" data-league="{e(lg)}"><h3>{e(names.get(lg, lg))}</h3>{blocks}</section>'
+    check_html = _by_day(checks, today, cards("chk"), "grid") or '<p class="empty">None.</p>'
+    match_html = _by_day(t, today, lambda g: "".join(
+        _match_block(m) for _, m in g.groupby(["kickoff", "league", "match"], sort=True)), "list") if has else ""
     chips = '<button class="chip on" data-f="all">All</button>' + "".join(
-        f'<button class="chip" data-f="{e(l)}">{e(l)}</button>' for l in leagues)
+        f'<button class="chip" data-f="{e(l)}" title="{e(names.get(l, l))}">{e(l)}</button>' for l in leagues)
     src = " · ".join(f"{e(k)}: {e(s)}" for k, s in result["sources"].items())
     skipped = "".join(f"<li>{e(s)}</li>" for s in result["skipped"][:40])
     arch = "".join(f'<a href="days/{d}.html">{e(d)}</a>' for d in archive)
@@ -149,10 +166,11 @@ dt{{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04
 .sub{{font-size:12px;color:var(--mute)}} .foot{{font-size:12px;color:var(--mute);border-top:1px solid var(--line);padding-top:6px}}
 .empty{{color:var(--mute)}}
 @media (max-width:600px){{header h1{{font-size:20px}} .stat{{min-width:0;flex:1 1 40%}}}}
-.league h3{{font-size:15px;margin:18px 0 6px}}
+.dayh{{font-size:14px;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--line);color:var(--mute);text-transform:uppercase;letter-spacing:.05em}}
+.lgt{{font-size:11px;font-weight:600;color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:0 5px;letter-spacing:.03em}}
 .match{{background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:6px}}
 .match summary{{display:flex;gap:12px;align-items:center;padding:9px 12px;cursor:pointer;flex-wrap:wrap}}
-.match .ko{{color:var(--mute);font-size:13px;min-width:110px}} .teams{{font-weight:600;flex:1}} .xg{{color:var(--mute);font-size:13px}}
+.match .ko{{color:var(--mute);font-size:13px;min-width:44px;font-variant-numeric:tabular-nums}} .teams{{font-weight:600;flex:1}} .xg{{color:var(--mute);font-size:13px}}
 .badge{{background:var(--accbg);color:var(--acc);border-radius:99px;padding:1px 8px;font-size:12px;font-weight:600}}
 .tw{{overflow-x:auto;padding:0 12px 10px}}
 table{{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}}
@@ -172,10 +190,10 @@ details.info{{margin-top:28px;color:var(--mute);font-size:13px}}
 <div class="chips">{chips}</div>
 
 <h2>Value picks <small>edge {v['min_edge']:.0%}–{v['max_edge']:.0%}, odds {v['min_odds']}–{v['max_odds']}</small></h2>
-<div class="grid">{pick_html}</div>
+{pick_html}
 
 <h2>Check manually <small>edge above {v['max_edge']:.0%}: usually the model is missing team news</small></h2>
-<div class="grid">{check_html}</div>
+{check_html}
 
 <h2>All matches <small>tap a match for every market</small></h2>
 {match_html or '<p class="empty">No matches with odds in this window.</p>'}
@@ -194,6 +212,7 @@ document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{{
  document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));
  const f=b.dataset.f;
  document.querySelectorAll('[data-league]').forEach(el=>{{ if(!el.classList.contains('chip')) el.style.display=(f==='all'||el.dataset.league===f)?'':'none'; }});
+ document.querySelectorAll('section.day').forEach(sec=>{{ sec.style.display=[...sec.querySelectorAll('[data-league]')].some(x=>x.style.display!=='none')?'':'none'; }});
 }});
 </script></body></html>"""
 
