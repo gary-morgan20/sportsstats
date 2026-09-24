@@ -1,0 +1,20 @@
+# Map a team name from an odds source to the football-data.co.uk spelling.
+# The app tries to match names automatically; add a line here when it lists a team
+# in data/unmatched_teams.txt.
+"Paris Saint Germain": "Paris SG"
+"Paris Saint-Germain": "Paris SG"
+"Nottingham Forest": "Nott'm Forest"
+"Sheffield Wednesday": "Sheffield Weds"
+"Bayern Munich": "Bayern Munich"
+"Atletico Madrid": "Ath Madrid"
+"Athletic Bilbao": "Ath Bilbao"
+"Real Sociedad": "Sociedad"
+"Borussia Monchengladbach": "M'gladbach"
+"Eintracht Frankfurt": "Ein Frankfurt"
+"PSV Eindhoven": "PSV Eindhoven"
+"Sporting Lisbon": "Sp Lisbon"
+"Sporting CP": "Sp Lisbon"
+"FC Porto": "Porto"
+"SC Braga": "Sp Braga"
+"Inter Milan": "Inter"
+"AC Milan": "Milan"

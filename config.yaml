@@ -1,0 +1,61 @@
+# SportsStats configuration
+# Edit this file to add leagues, markets or change thresholds.
+
+leagues:
+  # key: our short name
+  # fd:  football-data.co.uk code (historical results + stats + closing odds). null = not covered
+  # odds_api: The Odds API sport key
+  # api_football: API-Football league id
+  EPL:          {name: "English Premier League", fd: E0,  odds_api: soccer_epl,                    api_football: 39}
+  CHAMP:        {name: "English Championship",   fd: E1,  odds_api: soccer_efl_champ,              api_football: 40}
+  L1:           {name: "English League One",     fd: E2,  odds_api: soccer_england_league1,        api_football: 41}
+  L2:           {name: "English League Two",     fd: E3,  odds_api: soccer_england_league2,        api_football: 42}
+  FACUP:        {name: "English FA Cup",         fd: null, odds_api: soccer_fa_cup,              api_football: 45}
+  LIGUE1:       {name: "France Ligue 1",         fd: F1,  odds_api: soccer_france_ligue_one,       api_football: 61}
+  BUNDESLIGA:   {name: "Germany Bundesliga",     fd: D1,  odds_api: soccer_germany_bundesliga,     api_football: 78}
+  LALIGA:       {name: "Spain La Liga",          fd: SP1, odds_api: soccer_spain_la_liga,          api_football: 140}
+  SERIEA:       {name: "Italy Serie A",          fd: I1,  odds_api: soccer_italy_serie_a,          api_football: 135}
+  PORTUGAL:     {name: "Portugal Liga Portugal", fd: P1,  odds_api: soccer_portugal_primeira_liga, api_football: 94}
+  EREDIVISIE:   {name: "Dutch Eredivisie",       fd: N1,  odds_api: soccer_netherlands_eredivisie, api_football: 88}
+
+markets:
+  - home_win
+  - away_win
+  - double_chance        # 1X, X2, 12
+  - draw_no_bet          # home / away
+  - over_under_1.5
+  - over_under_2.5
+  - over_under_3.5
+  - btts                 # yes / no
+  - first_half_goals     # over/under 0.5, 1.5
+  - total_corners        # over/under 8.5, 9.5, 10.5, 11.5
+
+history:
+  seasons_back: 3            # how many past seasons to fit the model on (plus current)
+  current_season: "2627"     # football-data season code (2026/27)
+  decay_half_life_days: 180  # older matches count less; after this many days a match counts half
+
+odds:
+  # UK prices only (what Oddschecker shows). Each extra region multiplies The Odds API credit use.
+  odds_api_regions: [uk]
+  odds_api_reserve_credits: 50   # stop fetching extra markets when this few credits remain
+  # Bookmakers whose prices count as "best odds". Remove any you don't have an account with.
+  my_bookmakers: [betfair_ex_uk, bet365, williamhill, skybet, paddypower, ladbrokes_uk, coral,
+                  betfred_uk, betvictor, sport888, betway, boylesports, unibet_uk, betfair_sb_uk,
+                  virginbet, livescorebet, betano_uk, leovegas, casumo, grosvenor, smarkets, matchbook]
+  # Exchange commission on winnings. The edge is worked out on odds after commission.
+  # Betfair's standard UK rate is 5%; change it if yours is lower.
+  exchange_commission: {betfair_ex_uk: 0.05, smarkets: 0.02, matchbook: 0.02}
+
+site:
+  title: "SportsStats"
+  days_ahead: 2           # matches from today up to this many days ahead
+  archive_days: 60        # how many past daily pages to keep
+
+value:
+  min_edge: 0.05          # model prob x best odds - 1 must be at least 5%
+  max_edge: 0.30          # above this, list under "check manually" instead - likely missing news
+  min_odds: 1.30
+  max_odds: 6.00
+  min_matches_per_team: 8 # skip teams with too little history (promoted sides early season)
+  kelly_fraction: 0.25    # suggested stake = quarter Kelly (shown for info only)
