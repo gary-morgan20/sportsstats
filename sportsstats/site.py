@@ -201,7 +201,7 @@ details.info{{margin-top:28px;color:var(--mute);font-size:13px}}
 <h2>Previous days</h2><div class="arch">{arch}</div>
 
 <details class="info"><summary>How to read this page</summary>
-<p><b>Fair odds</b> = 1 ÷ model probability. <b>Best odds</b> = highest UK price (bookmakers and Betfair Exchange). Exchange prices are compared after commission (shown as <b>net</b>).
+<p><b>Fair odds</b> = 1 ÷ model probability. <b>Best odds</b> = Betfair Exchange back price (other bookmakers only feed the market average). The edge uses the price after commission (shown as <b>net</b>); the odds range applies to the quoted price.
 <b>Edge</b> = model probability × best odds (after any commission) − 1. <b>Market</b> = the bookmakers' average price with their margin removed.
 <b>Stake</b> = {v['kelly_fraction']:g} Kelly as % of bankroll, for guidance only. <b>xG</b> = model's expected goals, home–away.
 The model knows nothing about injuries, suspensions or rotation.</p>

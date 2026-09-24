@@ -46,10 +46,9 @@ odds:
   # Extra markets (BTTS, DNB, double chance, 1st half, corners) cost ~5-7 credits per match.
   # Leave false on the free 500-credit plan; set true on a paid plan.
   odds_api_extra_markets: false
-  # Bookmakers whose prices count as "best odds". Remove any you don't have an account with.
-  my_bookmakers: [betfair_ex_uk, bet365, williamhill, skybet, paddypower, ladbrokes_uk, coral,
-                  betfred_uk, betvictor, sport888, betway, boylesports, unibet_uk, betfair_sb_uk,
-                  virginbet, livescorebet, betano_uk, leovegas, casumo, grosvenor, smarkets, matchbook]
+  # Bookmakers whose prices count as "best odds" (the price you'd actually take).
+  # Other UK bookmakers are still fetched, but only feed the "market" average probability.
+  my_bookmakers: [betfair_ex_uk]
   # Exchange commission on winnings. The edge is worked out on odds after commission.
   # Betfair's standard UK rate is 5%; change it if yours is lower.
   exchange_commission: {betfair_ex_uk: 0.05, smarkets: 0.02, matchbook: 0.02}
@@ -62,7 +61,7 @@ site:
 value:
   min_edge: 0.05          # model prob x best odds - 1 must be at least 5%
   max_edge: 0.30          # above this, list under "check manually" instead - likely missing news
-  min_odds: 1.30
-  max_odds: 6.00
+  min_odds: 1.55          # Betfair price as quoted (before commission)
+  max_odds: 2.10
   min_matches_per_team: 8 # skip teams with too little history (promoted sides early season)
   kelly_fraction: 0.25    # suggested stake = quarter Kelly (shown for info only)
