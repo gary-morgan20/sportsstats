@@ -6,7 +6,7 @@
 @media (prefers-color-scheme:dark){:root{--bg:#131412;--card:#1c1d1b;--ink:#ecebe6;--mute:#9a9a93;--line:#2e2f2c;--acc:#4cc27c;--accbg:#173222;--warn:#e0a84a;--warnbg:#33290f}}
 *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
 main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
-header h1{margin:0;font-size:24px} header p{margin:4px 0 0;color:var(--mute);font-size:13px}
+header h1{margin:0;font-size:24px} .src{font-size:12px} header p{margin:4px 0 0;color:var(--mute);font-size:13px}
 .stats{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
 .stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:120px}
 .stat b{display:block;font-size:22px} .stat span{color:var(--mute);font-size:12px}
@@ -39,22 +39,539 @@ th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left;white-
 details.info{margin-top:28px;color:var(--mute);font-size:13px}
 </style></head><body><main>
 <header><h1>SportsStats · Thursday 24 September 2026</h1>
-<p>Updated 2026-09-24 11:45 UTC · kick-offs in Paris time · next 2 days of fixtures</p></header>
+<p>Updated 2026-09-24 12:02 UTC · kick-offs in Paris time · next 2 days of fixtures</p>
+<p class="src">football-data: ok, 0 matches in window · the-odds-api: 47 matches, 494 credits left · api-football: 0 matches, None requests left today | error: EPL: API-Football /fixtures: {&#x27;plan&#x27;: &#x27;Free plans do not have access to this season, try from 2022 to 2024.&#x27;}</p></header>
 <div class="stats">
-<div class="stat"><b>0</b><span>value picks</span></div>
-<div class="stat"><b>0</b><span>matches analysed</span></div>
-<div class="stat"><b>0</b><span>markets priced</span></div>
-<div class="stat"><b>0</b><span>to check manually</span></div></div>
-<div class="chips"><button class="chip on" data-f="all">All</button></div>
+<div class="stat"><b>34</b><span>value picks</span></div>
+<div class="stat"><b>39</b><span>matches analysed</span></div>
+<div class="stat"><b>172</b><span>markets priced</span></div>
+<div class="stat"><b>2</b><span>to check manually</span></div></div>
+<div class="chips"><button class="chip on" data-f="all">All</button><button class="chip" data-f="L1">L1</button><button class="chip" data-f="L2">L2</button><button class="chip" data-f="NATIONS">NATIONS</button></div>
 
 <h2>Value picks <small>edge 5%–30%, odds 1.3–6.0</small></h2>
-<div class="grid"><p class="empty">No selections met the value threshold today.</p></div>
+<div class="grid"><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 20:45</span></div>
+  <h3>Albania v Belarus</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.67</dd><dd class="sub">William Hill</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.30</dd><dd class="sub">model 77%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+29%</dd><dd class="sub">market 57%</dd></div>
+  </dl>
+  <div class="foot">xG 1.13-0.52 · stake 10.7% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 20:45</span></div>
+  <h3>Liechtenstein v Lithuania</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.61</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.27</dd><dd class="sub">model 79%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+27%</dd><dd class="sub">market 59%</dd></div>
+  </dl>
+  <div class="foot">xG 0.18-1.40 · stake 11.0% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="L2">
+  <div class="pick-top"><span class="lg">L2</span><span class="ko">Sat 26 Sep 18:30</span></div>
+  <h3>Oldham v Salford</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.08</dd><dd class="sub">Matchbook<br>net 2.06</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.65</dd><dd class="sub">model 60%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+25%</dd><dd class="sub">market 47%</dd></div>
+  </dl>
+  <div class="foot">xG 1.30-0.97 · stake 5.8% · 5 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 18:00</span></div>
+  <h3>Bulgaria v Luxembourg</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.56</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.26</dd><dd class="sub">model 79%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+24%</dd><dd class="sub">market 60%</dd></div>
+  </dl>
+  <div class="foot">xG 0.92-0.64 · stake 10.5% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 20:45</span></div>
+  <h3>Kosovo v Republic of Ireland</h3>
+  <div class="mk">Home win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.45</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.00</dd><dd class="sub">model 50%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+23%</dd><dd class="sub">market 39%</dd></div>
+  </dl>
+  <div class="foot">xG 1.34-0.73 · stake 3.9% · 10 bookmaker(s)</div>
+</article><article class="pick " data-league="L2">
+  <div class="pick-top"><span class="lg">L2</span><span class="ko">Sat 26 Sep 16:00</span></div>
+  <h3>Shrewsbury v Colchester</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.75</dd><dd class="sub">Betway</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.24</dd><dd class="sub">model 45%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+22%</dd><dd class="sub">market 35%</dd></div>
+  </dl>
+  <div class="foot">xG 0.86-1.23 · stake 3.2% · 20 bookmaker(s)</div>
+</article><article class="pick " data-league="L2">
+  <div class="pick-top"><span class="lg">L2</span><span class="ko">Sat 26 Sep 16:00</span></div>
+  <h3>Swindon v Accrington</h3>
+  <div class="mk">Home win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.28</dd><dd class="sub">Matchbook<br>net 2.25</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.84</dd><dd class="sub">model 54%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+22%</dd><dd class="sub">market 43%</dd></div>
+  </dl>
+  <div class="foot">xG 1.84-1.10 · stake 4.5% · 20 bookmaker(s)</div>
+</article><article class="pick " data-league="L2">
+  <div class="pick-top"><span class="lg">L2</span><span class="ko">Sat 26 Sep 16:00</span></div>
+  <h3>Tranmere v Walsall</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.92</dd><dd class="sub">Matchbook<br>net 2.88</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.40</dd><dd class="sub">model 42%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+20%</dd><dd class="sub">market 34%</dd></div>
+  </dl>
+  <div class="foot">xG 1.18-1.40 · stake 2.6% · 20 bookmaker(s)</div>
+</article><article class="pick " data-league="L1">
+  <div class="pick-top"><span class="lg">L1</span><span class="ko">Sat 26 Sep 16:00</span></div>
+  <h3>Bradford v Barnsley</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.07</dd><dd class="sub">Grosvenor</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.73</dd><dd class="sub">model 58%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+20%</dd><dd class="sub">market 45%</dd></div>
+  </dl>
+  <div class="foot">xG 1.54-0.82 · stake 4.6% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="L2">
+  <div class="pick-top"><span class="lg">L2</span><span class="ko">Sat 26 Sep 16:00</span></div>
+  <h3>Shrewsbury v Colchester</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.83</dd><dd class="sub">Matchbook<br>net 1.81</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.53</dd><dd class="sub">model 65%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+18%</dd><dd class="sub">market 53%</dd></div>
+  </dl>
+  <div class="foot">xG 0.86-1.23 · stake 5.7% · 5 bookmaker(s)</div>
+</article><article class="pick " data-league="L2">
+  <div class="pick-top"><span class="lg">L2</span><span class="ko">Sat 26 Sep 18:30</span></div>
+  <h3>Oldham v Salford</h3>
+  <div class="mk">Home win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.70</dd><dd class="sub">Virgin Bet</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.28</dd><dd class="sub">model 44%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+18%</dd><dd class="sub">market 38%</dd></div>
+  </dl>
+  <div class="foot">xG 1.30-0.97 · stake 2.7% · 19 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 20:45</span></div>
+  <h3>Norway v Denmark</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">4.60</dd><dd class="sub">Betfair Exchange<br>net 4.42</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">3.75</dd><dd class="sub">model 27%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+18%</dd><dd class="sub">market 23%</dd></div>
+  </dl>
+  <div class="foot">xG 2.04-1.46 · stake 1.3% · 11 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 18:00</span></div>
+  <h3>Iceland v Estonia</h3>
+  <div class="mk">Goals over 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.73</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.47</dd><dd class="sub">model 68%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+18%</dd><dd class="sub">market 56%</dd></div>
+  </dl>
+  <div class="foot">xG 2.68-0.83 · stake 6.1% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 20:45</span></div>
+  <h3>Netherlands v Germany</h3>
+  <div class="mk">Home win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.72</dd><dd class="sub">Betfair Exchange<br>net 2.63</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.26</dd><dd class="sub">model 44%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+17%</dd><dd class="sub">market 37%</dd></div>
+  </dl>
+  <div class="foot">xG 1.86-1.55 · stake 2.5% · 11 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 18:00</span></div>
+  <h3>Andorra v Malta</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.30</dd><dd class="sub">William Hill</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.14</dd><dd class="sub">model 88%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+14%</dd><dd class="sub">market 71%</dd></div>
+  </dl>
+  <div class="foot">xG 0.46-0.73 · stake 12.1% · 1 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Fri 25 Sep 20:45</span></div>
+  <h3>Hungary v Ukraine</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">3.35</dd><dd class="sub">Betfair Exchange<br>net 3.23</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.85</dd><dd class="sub">model 35%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+13%</dd><dd class="sub">market 30%</dd></div>
+  </dl>
+  <div class="foot">xG 1.41-1.36 · stake 1.5% · 11 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 15:00</span></div>
+  <h3>Slovenia v Scotland</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.67</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.48</dd><dd class="sub">model 68%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+13%</dd><dd class="sub">market 57%</dd></div>
+  </dl>
+  <div class="foot">xG 0.91-1.09 · stake 4.8% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Fri 25 Sep 20:45</span></div>
+  <h3>Montenegro v Cyprus</h3>
+  <div class="mk">Goals over 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.12</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.88</dd><dd class="sub">model 53%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+13%</dd><dd class="sub">market 48%</dd></div>
+  </dl>
+  <div class="foot">xG 1.64-1.17 · stake 2.9% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Fri 25 Sep 20:45</span></div>
+  <h3>Poland v Bosnia and Herzegovina</h3>
+  <div class="mk">Goals over 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.88</dd><dd class="sub">LeoVegas</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.68</dd><dd class="sub">model 60%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+12%</dd><dd class="sub">market 50%</dd></div>
+  </dl>
+  <div class="foot">xG 2.09-1.00 · stake 3.5% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 18:00</span></div>
+  <h3>Faroe Islands v Kazakhstan</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.56</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.40</dd><dd class="sub">model 72%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+12%</dd><dd class="sub">market 60%</dd></div>
+  </dl>
+  <div class="foot">xG 1.14-0.71 · stake 5.2% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 20:45</span></div>
+  <h3>Slovakia v Moldova</h3>
+  <div class="mk">Goals over 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.67</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.50</dd><dd class="sub">model 67%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+12%</dd><dd class="sub">market 58%</dd></div>
+  </dl>
+  <div class="foot">xG 2.85-0.59 · stake 4.3% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 20:45</span></div>
+  <h3>England v Spain</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.45</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.20</dd><dd class="sub">model 46%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+11%</dd><dd class="sub">market 39%</dd></div>
+  </dl>
+  <div class="foot">xG 1.32-1.70 · stake 2.0% · 11 bookmaker(s)</div>
+</article><article class="pick " data-league="L1">
+  <div class="pick-top"><span class="lg">L1</span><span class="ko">Sat 26 Sep 16:00</span></div>
+  <h3>Wycombe v Reading</h3>
+  <div class="mk">Home win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.70</dd><dd class="sub">Matchbook<br>net 2.67</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.40</dd><dd class="sub">model 42%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+11%</dd><dd class="sub">market 37%</dd></div>
+  </dl>
+  <div class="foot">xG 1.66-1.48 · stake 1.7% · 19 bookmaker(s)</div>
+</article><article class="pick " data-league="L1">
+  <div class="pick-top"><span class="lg">L1</span><span class="ko">Sat 26 Sep 16:00</span></div>
+  <h3>Plymouth v Burton</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">5.80</dd><dd class="sub">LiveScore Bet</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">5.26</dd><dd class="sub">model 19%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+10%</dd><dd class="sub">market 18%</dd></div>
+  </dl>
+  <div class="foot">xG 2.12-1.12 · stake 0.5% · 19 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 15:00</span></div>
+  <h3>Slovenia v Scotland</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.96</dd><dd class="sub">Betfair Exchange<br>net 2.86</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.61</dd><dd class="sub">model 38%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+10%</dd><dd class="sub">market 34%</dd></div>
+  </dl>
+  <div class="foot">xG 0.91-1.09 · stake 1.3% · 11 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Fri 25 Sep 18:00</span></div>
+  <h3>Armenia v Latvia</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.89</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.74</dd><dd class="sub">model 57%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+9%</dd><dd class="sub">market 50%</dd></div>
+  </dl>
+  <div class="foot">xG 1.52-0.86 · stake 2.5% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Sat 26 Sep 20:45</span></div>
+  <h3>England v Spain</h3>
+  <div class="mk">Goals over 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.87</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.72</dd><dd class="sub">model 58%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+8%</dd><dd class="sub">market 51%</dd></div>
+  </dl>
+  <div class="foot">xG 1.32-1.70 · stake 2.4% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 20:45</span></div>
+  <h3>Austria v Israel</h3>
+  <div class="mk">Goals over 3.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.35</dd><dd class="sub">LeoVegas</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">2.17</dd><dd class="sub">model 46%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+8%</dd><dd class="sub">market 41%</dd></div>
+  </dl>
+  <div class="foot">xG 2.44-1.04 · stake 1.5% · 2 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 20:45</span></div>
+  <h3>Serbia v Greece</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.64</dd><dd class="sub">LeoVegas</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.52</dd><dd class="sub">model 66%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+8%</dd><dd class="sub">market 57%</dd></div>
+  </dl>
+  <div class="foot">xG 0.99-1.07 · stake 3.2% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Fri 25 Sep 20:45</span></div>
+  <h3>Hungary v Ukraine</h3>
+  <div class="mk">Goals over 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.05</dd><dd class="sub">William Hill</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.90</dd><dd class="sub">model 52%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+8%</dd><dd class="sub">market 46%</dd></div>
+  </dl>
+  <div class="foot">xG 1.41-1.36 · stake 1.8% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 20:45</span></div>
+  <h3>Kosovo v Republic of Ireland</h3>
+  <div class="mk">Goals under 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.62</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.52</dd><dd class="sub">model 66%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+7%</dd><dd class="sub">market 59%</dd></div>
+  </dl>
+  <div class="foot">xG 1.34-0.73 · stake 2.7% · 2 bookmaker(s)</div>
+</article><article class="pick " data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 20:45</span></div>
+  <h3>Norway v Denmark</h3>
+  <div class="mk">Goals over 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.57</dd><dd class="sub">LeoVegas</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.47</dd><dd class="sub">model 68%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+6%</dd><dd class="sub">market 60%</dd></div>
+  </dl>
+  <div class="foot">xG 2.04-1.46 · stake 2.8% · 3 bookmaker(s)</div>
+</article><article class="pick " data-league="L1">
+  <div class="pick-top"><span class="lg">L1</span><span class="ko">Sat 26 Sep 16:00</span></div>
+  <h3>Plymouth v Burton</h3>
+  <div class="mk">Goals over 2.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.70</dd><dd class="sub">Matchbook<br>net 1.69</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.59</dd><dd class="sub">model 63%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+6%</dd><dd class="sub">market 58%</dd></div>
+  </dl>
+  <div class="foot">xG 2.12-1.12 · stake 2.1% · 5 bookmaker(s)</div>
+</article><article class="pick " data-league="L2">
+  <div class="pick-top"><span class="lg">L2</span><span class="ko">Sat 26 Sep 13:30</span></div>
+  <h3>Crawley Town v Barnet</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.81</dd><dd class="sub">LiveScore Bet</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.71</dd><dd class="sub">model 58%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+6%</dd><dd class="sub">market 53%</dd></div>
+  </dl>
+  <div class="foot">xG 1.07-2.00 · stake 1.8% · 6 bookmaker(s)</div>
+</article></div>
 
 <h2>Check manually <small>edge above 30%: usually the model is missing team news</small></h2>
-<div class="grid"><p class="empty">None.</p></div>
+<div class="grid"><article class="pick chk" data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Thu 24 Sep 18:00</span></div>
+  <h3>Andorra v Malta</h3>
+  <div class="mk">Goals under 1.5</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.14</dd><dd class="sub">Casumo</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.53</dd><dd class="sub">model 66%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+40%</dd><dd class="sub">market 44%</dd></div>
+  </dl>
+  <div class="foot">xG 0.46-0.73 · stake 8.8% · 2 bookmaker(s)</div>
+</article><article class="pick chk" data-league="NATIONS">
+  <div class="pick-top"><span class="lg">NATIONS</span><span class="ko">Fri 25 Sep 20:45</span></div>
+  <h3>Montenegro v Cyprus</h3>
+  <div class="mk">Away win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">5.30</dd><dd class="sub">Betfair Exchange<br>net 5.08</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">3.83</dd><dd class="sub">model 26%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+33%</dd><dd class="sub">market 20%</dd></div>
+  </dl>
+  <div class="foot">xG 1.64-1.17 · stake 2.0% · 11 bookmaker(s)</div>
+</article></div>
 
 <h2>All matches <small>tap a match for every market</small></h2>
-<p class="empty">No matches with odds in this window.</p>
+<section class="league" data-league="L1"><h3>English League One</h3><details class="match" data-league="L1">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Bradford v Barnsley</span>
+<span class="xg">xG 1.54-0.82</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>20%</td><td class=n>5.12</td><td class=n>4.30</td><td>Casumo</td><td class=n>-16%</td></tr><tr class=''><td>Home win</td><td class=n>54%</td><td class=n>1.86</td><td class=n>1.80</td><td>Ladbrokes</td><td class=n>-3%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>42%</td><td class=n>2.37</td><td class=n>1.72</td><td>Grosvenor</td><td class=n>-28%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>58%</td><td class=n>1.73</td><td class=n>2.07</td><td>Grosvenor</td><td class=n>+20%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Cambridge v AFC Wimbledon</span>
+<span class="xg">xG 1.63-0.89</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>20%</td><td class=n>5.00</td><td class=n>4.40</td><td>Matchbook</td><td class=n>-13%</td></tr><tr class=''><td>Home win</td><td class=n>55%</td><td class=n>1.84</td><td class=n>1.90</td><td>Matchbook</td><td class=n>+2%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>46%</td><td class=n>2.16</td><td class=n>2.12</td><td>Matchbook</td><td class=n>-3%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>54%</td><td class=n>1.86</td><td class=n>1.87</td><td>Grosvenor</td><td class=n>+0%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Mansfield v Leyton Orient</span>
+<span class="xg">xG 1.57-1.26</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>30%</td><td class=n>3.31</td><td class=n>3.30</td><td>Casumo</td><td class=n>-0%</td></tr><tr class=''><td>Home win</td><td class=n>44%</td><td class=n>2.27</td><td class=n>2.10</td><td>Casumo</td><td class=n>-7%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>54%</td><td class=n>1.86</td><td class=n>1.77</td><td>Grosvenor</td><td class=n>-5%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>46%</td><td class=n>2.16</td><td class=n>2.00</td><td>Grosvenor</td><td class=n>-8%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Plymouth v Burton</span>
+<span class="xg">xG 2.12-1.12</span><span class="badge">2 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='v'><td>Away win</td><td class=n>19%</td><td class=n>5.26</td><td class=n>5.80</td><td>LiveScore Bet</td><td class=n>+10%</td></tr><tr class=''><td>Home win</td><td class=n>60%</td><td class=n>1.67</td><td class=n>1.62</td><td>Unibet</td><td class=n>-3%</td></tr><tr class='v'><td>Goals over 2.5</td><td class=n>63%</td><td class=n>1.59</td><td class=n>1.70</td><td>Matchbook</td><td class=n>+6%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>37%</td><td class=n>2.69</td><td class=n>2.28</td><td>Grosvenor</td><td class=n>-15%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Stockport v Peterboro</span>
+<span class="xg">xG 2.33-1.07</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>16%</td><td class=n>6.37</td><td class=n>7.80</td><td>Matchbook</td><td class=n>+20%</td></tr><tr class=''><td>Home win</td><td class=n>65%</td><td class=n>1.53</td><td class=n>1.42</td><td>Smarkets</td><td class=n>-8%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>66%</td><td class=n>1.51</td><td class=n>1.36</td><td>William Hill</td><td class=n>-10%</td></tr><tr class=''><td>Goals over 3.5</td><td class=n>44%</td><td class=n>2.26</td><td class=n>2.04</td><td>Grosvenor</td><td class=n>-10%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>34%</td><td class=n>2.95</td><td class=n>2.90</td><td>William Hill</td><td class=n>-2%</td></tr><tr class=''><td>Goals under 3.5</td><td class=n>56%</td><td class=n>1.79</td><td class=n>1.86</td><td>Matchbook</td><td class=n>+3%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Wycombe v Reading</span>
+<span class="xg">xG 1.66-1.48</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>34%</td><td class=n>2.95</td><td class=n>2.70</td><td>Smarkets</td><td class=n>-10%</td></tr><tr class='v'><td>Home win</td><td class=n>42%</td><td class=n>2.40</td><td class=n>2.70</td><td>Matchbook</td><td class=n>+11%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>61%</td><td class=n>1.64</td><td class=n>1.70</td><td>Grosvenor</td><td class=n>+4%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>39%</td><td class=n>2.56</td><td class=n>2.15</td><td>LeoVegas</td><td class=n>-16%</td></tr></tbody></table></div></details></section><section class="league" data-league="L2"><h3>English League Two</h3><details class="match" data-league="L2">
+<summary><span class="ko">Sat 26 Sep 13:30</span><span class="teams">Crawley Town v Barnet</span>
+<span class="xg">xG 1.07-2.00</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='v'><td>Away win</td><td class=n>58%</td><td class=n>1.71</td><td class=n>1.81</td><td>LiveScore Bet</td><td class=n>+6%</td></tr><tr class=''><td>Home win</td><td class=n>20%</td><td class=n>5.11</td><td class=n>4.25</td><td>Unibet</td><td class=n>-17%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>59%</td><td class=n>1.69</td><td class=n>1.61</td><td>Grosvenor</td><td class=n>-5%</td></tr><tr class=''><td>Goals over 3.5</td><td class=n>37%</td><td class=n>2.71</td><td class=n>2.30</td><td>LeoVegas</td><td class=n>-15%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>41%</td><td class=n>2.45</td><td class=n>2.20</td><td>Grosvenor</td><td class=n>-10%</td></tr><tr class=''><td>Goals under 3.5</td><td class=n>63%</td><td class=n>1.58</td><td class=n>1.58</td><td>LeoVegas</td><td class=n>-0%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Cheltenham v Chesterfield</span>
+<span class="xg">xG 1.37-1.64</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>44%</td><td class=n>2.30</td><td class=n>2.24</td><td>Matchbook</td><td class=n>-4%</td></tr><tr class=''><td>Home win</td><td class=n>32%</td><td class=n>3.14</td><td class=n>3.15</td><td>Virgin Bet</td><td class=n>+0%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>58%</td><td class=n>1.72</td><td class=n>1.76</td><td>Grosvenor</td><td class=n>+2%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>42%</td><td class=n>2.38</td><td class=n>2.20</td><td>William Hill</td><td class=n>-8%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Newport County v Grimsby</span>
+<span class="xg">xG 1.11-1.78</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>53%</td><td class=n>1.89</td><td class=n>1.93</td><td>LiveScore Bet</td><td class=n>+2%</td></tr><tr class=''><td>Home win</td><td class=n>23%</td><td class=n>4.31</td><td class=n>4.40</td><td>Matchbook</td><td class=n>+1%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>55%</td><td class=n>1.81</td><td class=n>1.83</td><td>Grosvenor</td><td class=n>+1%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>45%</td><td class=n>2.23</td><td class=n>2.04</td><td>Matchbook</td><td class=n>-9%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Shrewsbury v Colchester</span>
+<span class="xg">xG 0.86-1.23</span><span class="badge">2 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='v'><td>Away win</td><td class=n>45%</td><td class=n>2.24</td><td class=n>2.75</td><td>Betway</td><td class=n>+22%</td></tr><tr class=''><td>Home win</td><td class=n>25%</td><td class=n>3.94</td><td class=n>2.60</td><td>Unibet</td><td class=n>-34%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>35%</td><td class=n>2.88</td><td class=n>2.00</td><td>William Hill</td><td class=n>-31%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>65%</td><td class=n>1.53</td><td class=n>1.83</td><td>Matchbook</td><td class=n>+18%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Swindon v Accrington</span>
+<span class="xg">xG 1.84-1.10</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>22%</td><td class=n>4.49</td><td class=n>3.30</td><td>LiveScore Bet</td><td class=n>-26%</td></tr><tr class='v'><td>Home win</td><td class=n>54%</td><td class=n>1.84</td><td class=n>2.28</td><td>Matchbook</td><td class=n>+22%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>56%</td><td class=n>1.78</td><td class=n>1.86</td><td>Matchbook</td><td class=n>+4%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>44%</td><td class=n>2.29</td><td class=n>2.02</td><td>Matchbook</td><td class=n>-13%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">Sat 26 Sep 16:00</span><span class="teams">Tranmere v Walsall</span>
+<span class="xg">xG 1.18-1.40</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='v'><td>Away win</td><td class=n>42%</td><td class=n>2.40</td><td class=n>2.92</td><td>Matchbook</td><td class=n>+20%</td></tr><tr class=''><td>Home win</td><td class=n>31%</td><td class=n>3.19</td><td class=n>2.60</td><td>Virgin Bet</td><td class=n>-18%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>48%</td><td class=n>2.10</td><td class=n>1.92</td><td>Matchbook</td><td class=n>-10%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>52%</td><td class=n>1.91</td><td class=n>1.94</td><td>Matchbook</td><td class=n>+1%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">Sat 26 Sep 18:30</span><span class="teams">Oldham v Salford</span>
+<span class="xg">xG 1.30-0.97</span><span class="badge">2 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>27%</td><td class=n>3.65</td><td class=n>2.76</td><td>Matchbook</td><td class=n>-25%</td></tr><tr class='v'><td>Home win</td><td class=n>44%</td><td class=n>2.28</td><td class=n>2.70</td><td>Virgin Bet</td><td class=n>+18%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>40%</td><td class=n>2.53</td><td class=n>1.79</td><td>Grosvenor</td><td class=n>-29%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>60%</td><td class=n>1.65</td><td class=n>2.08</td><td>Matchbook</td><td class=n>+25%</td></tr></tbody></table></div></details></section><section class="league" data-league="NATIONS"><h3>UEFA Nations League</h3><details class="match" data-league="NATIONS">
+<summary><span class="ko">Thu 24 Sep 18:00</span><span class="teams">Andorra v Malta</span>
+<span class="xg">xG 0.46-0.73</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>37%</td><td class=n>2.70</td><td class=n>2.62</td><td>Betfair Exchange</td><td class=n>-6%</td></tr><tr class=''><td>Home win</td><td class=n>20%</td><td class=n>5.08</td><td class=n>3.70</td><td>Betfair Exchange</td><td class=n>-30%</td></tr><tr class=''><td>Goals over 1.5</td><td class=n>34%</td><td class=n>2.90</td><td class=n>1.73</td><td>LeoVegas</td><td class=n>-40%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>12%</td><td class=n>8.37</td><td class=n>3.25</td><td>William Hill</td><td class=n>-61%</td></tr><tr class='c'><td>Goals under 1.5</td><td class=n>66%</td><td class=n>1.53</td><td class=n>2.14</td><td>Casumo</td><td class=n>+40%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>88%</td><td class=n>1.14</td><td class=n>1.30</td><td>William Hill</td><td class=n>+14%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Thu 24 Sep 20:45</span><span class="teams">Austria v Israel</span>
+<span class="xg">xG 2.44-1.04</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>14%</td><td class=n>7.35</td><td class=n>7.40</td><td>Betfair Exchange</td><td class=n>-4%</td></tr><tr class=''><td>Home win</td><td class=n>68%</td><td class=n>1.48</td><td class=n>1.48</td><td>Ladbrokes</td><td class=n>-0%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>68%</td><td class=n>1.48</td><td class=n>1.53</td><td>William Hill</td><td class=n>+4%</td></tr><tr class='v'><td>Goals over 3.5</td><td class=n>46%</td><td class=n>2.17</td><td class=n>2.35</td><td>LeoVegas</td><td class=n>+8%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>32%</td><td class=n>3.09</td><td class=n>2.40</td><td>William Hill</td><td class=n>-22%</td></tr><tr class=''><td>Goals under 3.5</td><td class=n>54%</td><td class=n>1.85</td><td class=n>1.61</td><td>Casumo</td><td class=n>-13%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Thu 24 Sep 20:45</span><span class="teams">Kosovo v Republic of Ireland</span>
+<span class="xg">xG 1.34-0.73</span><span class="badge">2 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>19%</td><td class=n>5.18</td><td class=n>3.40</td><td>Betfair Exchange</td><td class=n>-37%</td></tr><tr class='v'><td>Home win</td><td class=n>50%</td><td class=n>2.00</td><td class=n>2.45</td><td>Casumo</td><td class=n>+23%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>34%</td><td class=n>2.93</td><td class=n>2.30</td><td>William Hill</td><td class=n>-21%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>66%</td><td class=n>1.52</td><td class=n>1.62</td><td>Casumo</td><td class=n>+7%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Thu 24 Sep 20:45</span><span class="teams">Liechtenstein v Lithuania</span>
+<span class="xg">xG 0.18-1.40</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>69%</td><td class=n>1.46</td><td class=n>1.32</td><td>Betfair Exchange</td><td class=n>-10%</td></tr><tr class=''><td>Home win</td><td class=n>4%</td><td class=n>23.98</td><td class=n>17.00</td><td>Betfair Exchange</td><td class=n>-32%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>21%</td><td class=n>4.71</td><td class=n>2.30</td><td>LeoVegas</td><td class=n>-51%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>79%</td><td class=n>1.27</td><td class=n>1.61</td><td>Casumo</td><td class=n>+27%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Thu 24 Sep 20:45</span><span class="teams">Netherlands v Germany</span>
+<span class="xg">xG 1.86-1.55</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>32%</td><td class=n>3.17</td><td class=n>2.62</td><td>Coral</td><td class=n>-17%</td></tr><tr class='v'><td>Home win</td><td class=n>44%</td><td class=n>2.26</td><td class=n>2.72</td><td>Betfair Exchange</td><td class=n>+17%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>66%</td><td class=n>1.51</td><td class=n>1.44</td><td>William Hill</td><td class=n>-5%</td></tr><tr class=''><td>Goals over 3.5</td><td class=n>44%</td><td class=n>2.26</td><td class=n>2.08</td><td>Casumo</td><td class=n>-8%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>34%</td><td class=n>2.95</td><td class=n>2.50</td><td>William Hill</td><td class=n>-15%</td></tr><tr class=''><td>Goals under 3.5</td><td class=n>56%</td><td class=n>1.79</td><td class=n>1.72</td><td>Casumo</td><td class=n>-4%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Thu 24 Sep 20:45</span><span class="teams">Norway v Denmark</span>
+<span class="xg">xG 2.04-1.46</span><span class="badge">2 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='v'><td>Away win</td><td class=n>27%</td><td class=n>3.75</td><td class=n>4.60</td><td>Betfair Exchange</td><td class=n>+18%</td></tr><tr class=''><td>Home win</td><td class=n>50%</td><td class=n>1.99</td><td class=n>1.83</td><td>Coral</td><td class=n>-8%</td></tr><tr class='v'><td>Goals over 2.5</td><td class=n>68%</td><td class=n>1.47</td><td class=n>1.57</td><td>LeoVegas</td><td class=n>+6%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>32%</td><td class=n>3.11</td><td class=n>2.38</td><td>Casumo</td><td class=n>-23%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Thu 24 Sep 20:45</span><span class="teams">Portugal v Wales</span>
+<span class="xg">xG 2.96-0.70</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>5%</td><td class=n>18.35</td><td class=n>20.00</td><td>Betfair Exchange</td><td class=n>+4%</td></tr><tr class=''><td>Home win</td><td class=n>82%</td><td class=n>1.22</td><td class=n>1.20</td><td>Betfred</td><td class=n>-1%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>71%</td><td class=n>1.41</td><td class=n>1.36</td><td>William Hill</td><td class=n>-4%</td></tr><tr class=''><td>Goals over 3.5</td><td class=n>50%</td><td class=n>2.00</td><td class=n>2.10</td><td>Casumo</td><td class=n>+5%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>29%</td><td class=n>3.44</td><td class=n>2.90</td><td>William Hill</td><td class=n>-16%</td></tr><tr class=''><td>Goals under 3.5</td><td class=n>50%</td><td class=n>2.00</td><td class=n>1.77</td><td>LeoVegas</td><td class=n>-11%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Thu 24 Sep 20:45</span><span class="teams">Serbia v Greece</span>
+<span class="xg">xG 0.99-1.07</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>36%</td><td class=n>2.80</td><td class=n>2.62</td><td>Betfred</td><td class=n>-6%</td></tr><tr class=''><td>Home win</td><td class=n>32%</td><td class=n>3.17</td><td class=n>2.96</td><td>Betfair Exchange</td><td class=n>-10%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>34%</td><td class=n>2.93</td><td class=n>2.20</td><td>William Hill</td><td class=n>-25%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>66%</td><td class=n>1.52</td><td class=n>1.64</td><td>LeoVegas</td><td class=n>+8%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Fri 25 Sep 18:00</span><span class="teams">Armenia v Latvia</span>
+<span class="xg">xG 1.52-0.86</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>20%</td><td class=n>4.96</td><td class=n>5.20</td><td>Betfair Exchange</td><td class=n>+0%</td></tr><tr class=''><td>Home win</td><td class=n>52%</td><td class=n>1.94</td><td class=n>1.80</td><td>Betfair Exchange</td><td class=n>-9%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>42%</td><td class=n>2.35</td><td class=n>1.91</td><td>LeoVegas</td><td class=n>-19%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>57%</td><td class=n>1.74</td><td class=n>1.89</td><td>Casumo</td><td class=n>+9%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Fri 25 Sep 18:00</span><span class="teams">Georgia v Northern Ireland</span>
+<span class="xg">xG 1.52-0.93</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>22%</td><td class=n>4.59</td><td class=n>4.70</td><td>Betfair Exchange</td><td class=n>-2%</td></tr><tr class=''><td>Home win</td><td class=n>50%</td><td class=n>2.00</td><td class=n>1.91</td><td>Coral</td><td class=n>-4%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>44%</td><td class=n>2.26</td><td class=n>2.05</td><td>William Hill</td><td class=n>-9%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>56%</td><td class=n>1.80</td><td class=n>1.75</td><td>Casumo</td><td class=n>-3%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Fri 25 Sep 20:45</span><span class="teams">Hungary v Ukraine</span>
+<span class="xg">xG 1.41-1.36</span><span class="badge">2 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='v'><td>Away win</td><td class=n>35%</td><td class=n>2.85</td><td class=n>3.35</td><td>Betfair Exchange</td><td class=n>+13%</td></tr><tr class=''><td>Home win</td><td class=n>37%</td><td class=n>2.68</td><td class=n>2.42</td><td>Betfair Exchange</td><td class=n>-12%</td></tr><tr class='v'><td>Goals over 2.5</td><td class=n>52%</td><td class=n>1.90</td><td class=n>2.05</td><td>William Hill</td><td class=n>+8%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>48%</td><td class=n>2.11</td><td class=n>1.79</td><td>Casumo</td><td class=n>-15%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Fri 25 Sep 20:45</span><span class="teams">Italy v Belgium</span>
+<span class="xg">xG 1.48-1.28</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>32%</td><td class=n>3.16</td><td class=n>3.25</td><td>Virgin Bet</td><td class=n>+3%</td></tr><tr class=''><td>Home win</td><td class=n>41%</td><td class=n>2.45</td><td class=n>2.34</td><td>Betfair Exchange</td><td class=n>-7%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>52%</td><td class=n>1.92</td><td class=n>1.80</td><td>LeoVegas</td><td class=n>-6%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>48%</td><td class=n>2.08</td><td class=n>1.95</td><td>William Hill</td><td class=n>-6%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Fri 25 Sep 20:45</span><span class="teams">Montenegro v Cyprus</span>
+<span class="xg">xG 1.64-1.17</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='c'><td>Away win</td><td class=n>26%</td><td class=n>3.83</td><td class=n>5.30</td><td>Betfair Exchange</td><td class=n>+33%</td></tr><tr class=''><td>Home win</td><td class=n>47%</td><td class=n>2.12</td><td class=n>1.77</td><td>LeoVegas</td><td class=n>-16%</td></tr><tr class='v'><td>Goals over 2.5</td><td class=n>53%</td><td class=n>1.88</td><td class=n>2.12</td><td>Casumo</td><td class=n>+13%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>47%</td><td class=n>2.14</td><td class=n>1.85</td><td>William Hill</td><td class=n>-13%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Fri 25 Sep 20:45</span><span class="teams">Poland v Bosnia and Herzegovina</span>
+<span class="xg">xG 2.09-1.00</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>16%</td><td class=n>6.08</td><td class=n>5.40</td><td>Casumo</td><td class=n>-11%</td></tr><tr class=''><td>Home win</td><td class=n>61%</td><td class=n>1.63</td><td class=n>1.73</td><td>Betfair Exchange</td><td class=n>+4%</td></tr><tr class='v'><td>Goals over 2.5</td><td class=n>60%</td><td class=n>1.68</td><td class=n>1.88</td><td>LeoVegas</td><td class=n>+12%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>40%</td><td class=n>2.48</td><td class=n>1.88</td><td>Casumo</td><td class=n>-24%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Fri 25 Sep 20:45</span><span class="teams">Sweden v Romania</span>
+<span class="xg">xG 1.65-1.49</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>34%</td><td class=n>2.97</td><td class=n>6.80</td><td>Betfair Exchange</td><td class=n>+120%</td></tr><tr class=''><td>Home win</td><td class=n>41%</td><td class=n>2.46</td><td class=n>1.54</td><td>Betfair Exchange</td><td class=n>-38%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>61%</td><td class=n>1.65</td><td class=n>1.60</td><td>William Hill</td><td class=n>-3%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>39%</td><td class=n>2.55</td><td class=n>2.40</td><td>Casumo</td><td class=n>-6%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Fri 25 Sep 20:45</span><span class="teams">Turkey v France</span>
+<span class="xg">xG 1.47-1.84</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>46%</td><td class=n>2.19</td><td class=n>1.48</td><td>Coral</td><td class=n>-32%</td></tr><tr class=''><td>Home win</td><td class=n>30%</td><td class=n>3.34</td><td class=n>8.00</td><td>Betfair Exchange</td><td class=n>+129%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>64%</td><td class=n>1.55</td><td class=n>1.44</td><td>William Hill</td><td class=n>-7%</td></tr><tr class=''><td>Goals over 3.5</td><td class=n>42%</td><td class=n>2.36</td><td class=n>2.17</td><td>Casumo</td><td class=n>-8%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>36%</td><td class=n>2.81</td><td class=n>2.50</td><td>William Hill</td><td class=n>-11%</td></tr><tr class=''><td>Goals under 3.5</td><td class=n>58%</td><td class=n>1.73</td><td class=n>1.67</td><td>LeoVegas</td><td class=n>-4%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 15:00</span><span class="teams">Slovenia v Scotland</span>
+<span class="xg">xG 0.91-1.09</span><span class="badge">2 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='v'><td>Away win</td><td class=n>38%</td><td class=n>2.61</td><td class=n>2.96</td><td>Betfair Exchange</td><td class=n>+10%</td></tr><tr class=''><td>Home win</td><td class=n>28%</td><td class=n>3.51</td><td class=n>2.78</td><td>Betfair Exchange</td><td class=n>-23%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>32%</td><td class=n>3.09</td><td class=n>2.25</td><td>William Hill</td><td class=n>-27%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>68%</td><td class=n>1.48</td><td class=n>1.67</td><td>Casumo</td><td class=n>+13%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 18:00</span><span class="teams">Bulgaria v Luxembourg</span>
+<span class="xg">xG 0.92-0.64</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>23%</td><td class=n>4.31</td><td class=n>3.50</td><td>Casumo</td><td class=n>-19%</td></tr><tr class=''><td>Home win</td><td class=n>39%</td><td class=n>2.55</td><td class=n>2.42</td><td>Betfair Exchange</td><td class=n>-8%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>21%</td><td class=n>4.80</td><td class=n>2.35</td><td>LeoVegas</td><td class=n>-51%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>79%</td><td class=n>1.26</td><td class=n>1.56</td><td>Casumo</td><td class=n>+24%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 18:00</span><span class="teams">Faroe Islands v Kazakhstan</span>
+<span class="xg">xG 1.14-0.71</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>22%</td><td class=n>4.62</td><td class=n>3.60</td><td>Betfair Exchange</td><td class=n>-25%</td></tr><tr class=''><td>Home win</td><td class=n>45%</td><td class=n>2.23</td><td class=n>2.40</td><td>Betfair Exchange</td><td class=n>+4%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>28%</td><td class=n>3.52</td><td class=n>2.38</td><td>LeoVegas</td><td class=n>-32%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>72%</td><td class=n>1.40</td><td class=n>1.56</td><td>Casumo</td><td class=n>+12%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 18:00</span><span class="teams">Iceland v Estonia</span>
+<span class="xg">xG 2.68-0.83</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>8%</td><td class=n>11.90</td><td class=n>12.00</td><td>Betfair Exchange</td><td class=n>-4%</td></tr><tr class=''><td>Home win</td><td class=n>76%</td><td class=n>1.32</td><td class=n>1.30</td><td>Casumo</td><td class=n>-1%</td></tr><tr class='v'><td>Goals over 2.5</td><td class=n>68%</td><td class=n>1.47</td><td class=n>1.73</td><td>Casumo</td><td class=n>+18%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>32%</td><td class=n>3.13</td><td class=n>2.18</td><td>LeoVegas</td><td class=n>-30%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 18:00</span><span class="teams">San Marino v Finland</span>
+<span class="xg">xG 0.45-2.86</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>86%</td><td class=n>1.16</td><td class=n>1.10</td><td>Coral</td><td class=n>-6%</td></tr><tr class=''><td>Home win</td><td class=n>3%</td><td class=n>31.57</td><td class=n>41.00</td><td>William Hill</td><td class=n>+30%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>64%</td><td class=n>1.55</td><td class=n>1.50</td><td>William Hill</td><td class=n>-3%</td></tr><tr class=''><td>Goals over 3.5</td><td class=n>42%</td><td class=n>2.36</td><td class=n>2.33</td><td>Casumo</td><td class=n>-1%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>36%</td><td class=n>2.81</td><td class=n>2.40</td><td>William Hill</td><td class=n>-14%</td></tr><tr class=''><td>Goals under 3.5</td><td class=n>58%</td><td class=n>1.73</td><td class=n>1.60</td><td>LeoVegas</td><td class=n>-8%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 20:45</span><span class="teams">Albania v Belarus</span>
+<span class="xg">xG 1.13-0.52</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>16%</td><td class=n>6.22</td><td class=n>8.00</td><td>Betfair Exchange</td><td class=n>+23%</td></tr><tr class=''><td>Home win</td><td class=n>50%</td><td class=n>2.02</td><td class=n>1.53</td><td>Betfair Exchange</td><td class=n>-26%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>23%</td><td class=n>4.35</td><td class=n>2.20</td><td>LeoVegas</td><td class=n>-49%</td></tr><tr class='v'><td>Goals under 2.5</td><td class=n>77%</td><td class=n>1.30</td><td class=n>1.67</td><td>William Hill</td><td class=n>+29%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 20:45</span><span class="teams">Czech Republic v Croatia</span>
+<span class="xg">xG 1.31-1.70</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>46%</td><td class=n>2.19</td><td class=n>2.20</td><td>Coral</td><td class=n>+0%</td></tr><tr class=''><td>Home win</td><td class=n>28%</td><td class=n>3.50</td><td class=n>3.45</td><td>Betfair Exchange</td><td class=n>-5%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>58%</td><td class=n>1.73</td><td class=n>1.76</td><td>Casumo</td><td class=n>+2%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>42%</td><td class=n>2.38</td><td class=n>2.02</td><td>LeoVegas</td><td class=n>-15%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 20:45</span><span class="teams">England v Spain</span>
+<span class="xg">xG 1.32-1.70</span><span class="badge">2 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class='v'><td>Away win</td><td class=n>46%</td><td class=n>2.20</td><td class=n>2.45</td><td>Casumo</td><td class=n>+11%</td></tr><tr class=''><td>Home win</td><td class=n>29%</td><td class=n>3.48</td><td class=n>3.10</td><td>Betfair Exchange</td><td class=n>-14%</td></tr><tr class='v'><td>Goals over 2.5</td><td class=n>58%</td><td class=n>1.72</td><td class=n>1.87</td><td>Casumo</td><td class=n>+8%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>42%</td><td class=n>2.38</td><td class=n>1.91</td><td>LeoVegas</td><td class=n>-20%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 20:45</span><span class="teams">North Macedonia v Switzerland</span>
+<span class="xg">xG 0.76-2.41</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>73%</td><td class=n>1.36</td><td class=n>1.44</td><td>Betfair Exchange</td><td class=n>+4%</td></tr><tr class=''><td>Home win</td><td class=n>9%</td><td class=n>10.99</td><td class=n>8.60</td><td>Betfair Exchange</td><td class=n>-25%</td></tr><tr class=''><td>Goals over 2.5</td><td class=n>61%</td><td class=n>1.63</td><td class=n>1.70</td><td>LeoVegas</td><td class=n>+4%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>39%</td><td class=n>2.59</td><td class=n>2.08</td><td>Casumo</td><td class=n>-20%</td></tr></tbody></table></div></details><details class="match" data-league="NATIONS">
+<summary><span class="ko">Sat 26 Sep 20:45</span><span class="teams">Slovakia v Moldova</span>
+<span class="xg">xG 2.85-0.59</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>5%</td><td class=n>21.67</td><td class=n>16.00</td><td>Betfair Exchange</td><td class=n>-30%</td></tr><tr class=''><td>Home win</td><td class=n>83%</td><td class=n>1.20</td><td class=n>1.24</td><td>Casumo</td><td class=n>+3%</td></tr><tr class='v'><td>Goals over 2.5</td><td class=n>67%</td><td class=n>1.50</td><td class=n>1.67</td><td>Casumo</td><td class=n>+12%</td></tr><tr class=''><td>Goals under 2.5</td><td class=n>33%</td><td class=n>3.01</td><td class=n>2.30</td><td>William Hill</td><td class=n>-24%</td></tr></tbody></table></div></details></section>
 
 <h2>Previous days</h2><div class="arch"><a href="days/2026-09-24.html">2026-09-24</a></div>
 
@@ -63,7 +580,7 @@ details.info{margin-top:28px;color:var(--mute);font-size:13px}
 <b>Edge</b> = model probability × best odds (after any commission) − 1. <b>Market</b> = the bookmakers' average price with their margin removed.
 <b>Stake</b> = 0.25 Kelly as % of bankroll, for guidance only. <b>xG</b> = model's expected goals, home–away.
 The model knows nothing about injuries, suspensions or rotation.</p>
-<p>Sources: football-data: ok · api-football: ok, None requests left today</p><ul></ul></details>
+<p>Sources: football-data: ok, 0 matches in window · the-odds-api: 47 matches, 494 credits left · api-football: 0 matches, None requests left today | error: EPL: API-Football /fixtures: {&#x27;plan&#x27;: &#x27;Free plans do not have access to this season, try from 2022 to 2024.&#x27;}</p><ul><li>Milton Keynes Dons v Bromley: not enough history</li><li>Notts County v Blackpool: not enough history</li><li>Stevenage v Sheffield Weds: not enough history</li><li>Bristol Rvs v Exeter: not enough history</li><li>Fleetwood Town v Rochdale: not enough history</li><li>Port Vale v Northampton: not enough history</li><li>Rotherham v Crewe: not enough history</li><li>York v Gillingham: not enough history</li></ul></details>
 </main>
 <script>
 document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
