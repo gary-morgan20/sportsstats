@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SportsStats: 2026-10-20</title>
+<style>
+:root{--bg:#f7f7f5;--card:#fff;--ink:#1c1c1a;--mute:#6b6b66;--line:#e4e3de;--acc:#0b7a3b;--accbg:#e5f4ea;--warn:#9a6200;--warnbg:#fbf1dc}
+@media (prefers-color-scheme:dark){:root{--bg:#131412;--card:#1c1d1b;--ink:#ecebe6;--mute:#9a9a93;--line:#2e2f2c;--acc:#4cc27c;--accbg:#173222;--warn:#e0a84a;--warnbg:#33290f}}
+*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1100px;margin:0 auto;padding:20px 16px 60px}
+header h1{margin:0;font-size:24px} .src{font-size:12px} header p{margin:4px 0 0;color:var(--mute);font-size:13px}
+.stats{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;min-width:120px}
+.stat b{display:block;font-size:22px} .stat span{color:var(--mute);font-size:12px}
+h2{font-size:18px;margin:28px 0 10px} h2 small{color:var(--mute);font-weight:400;font-size:13px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0 4px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:5px 12px;font-size:13px;cursor:pointer}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.pick{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:10px;padding:12px 14px}
+.pick.chk{border-left-color:var(--warn)}
+.pick-top{display:flex;justify-content:space-between;font-size:12px;color:var(--mute)}
+.lg{font-weight:600;letter-spacing:.03em} .pick h3{margin:4px 0 2px;font-size:16px}
+.mk{font-weight:600;color:var(--acc)} .chk .mk{color:var(--warn)}
+dl{display:grid;grid-template-columns:repeat(3,1fr);margin:10px 0 6px;gap:6px} dl div{margin:0}
+dt{font-size:11px;color:var(--mute);text-transform:uppercase;letter-spacing:.04em} dd{margin:0}
+.big{font-size:20px;font-weight:650;font-variant-numeric:tabular-nums} .edge{color:var(--acc)} .chk .edge{color:var(--warn)}
+.sub{font-size:12px;color:var(--mute)} .foot{font-size:12px;color:var(--mute);border-top:1px solid var(--line);padding-top:6px}
+.empty{color:var(--mute)}
+@media (max-width:600px){header h1{font-size:20px} .stat{min-width:0;flex:1 1 40%}}
+.dayh{font-size:14px;margin:18px 0 8px;padding-bottom:4px;border-bottom:1px solid var(--line);color:var(--mute);text-transform:uppercase;letter-spacing:.05em}
+.lgt{font-size:11px;font-weight:600;color:var(--mute);border:1px solid var(--line);border-radius:4px;padding:0 5px;letter-spacing:.03em}
+.match{background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:6px}
+.match summary{display:flex;gap:12px;align-items:center;padding:9px 12px;cursor:pointer;flex-wrap:wrap}
+.match .ko{color:var(--mute);font-size:13px;min-width:44px;font-variant-numeric:tabular-nums} .teams{font-weight:600;flex:1} .xg{color:var(--mute);font-size:13px}
+.badge{background:var(--accbg);color:var(--acc);border-radius:99px;padding:1px 8px;font-size:12px;font-weight:600}
+.tw{overflow-x:auto;padding:0 12px 10px}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap} th{color:var(--mute);font-weight:500}
+.n{text-align:right} tr.v td{background:var(--accbg)} tr.c td{background:var(--warnbg)}
+.note{color:var(--mute);font-size:13px} .arch a{display:inline-block;margin:0 10px 6px 0;color:var(--ink)}
+details.info{margin-top:28px;color:var(--mute);font-size:13px}
+</style></head><body><main>
+<header><h1>SportsStats · Tuesday 20 October 2026</h1>
+<p>Updated 2026-10-20 09:46 UTC · kick-offs in Paris time · next 2 days of fixtures</p>
+<p class="src">football-data: ok, 0 matches in window · the-odds-api: 37 matches, 254 credits left · api-football: 0 matches, None requests left today | error: EPL: API-Football /fixtures: {&#x27;plan&#x27;: &#x27;Free plans do not have access to this season, try from 2022 to 2024.&#x27;}</p></header>
+<div class="stats">
+<div class="stat"><b>2</b><span>value picks</span></div>
+<div class="stat"><b>26</b><span>matches analysed</span></div>
+<div class="stat"><b>52</b><span>markets priced</span></div>
+<div class="stat"><b>0</b><span>to check manually</span></div></div>
+<div class="chips"><button class="chip on" data-f="all">All</button><button class="chip" data-f="CHAMP" title="English Championship">CHAMP</button><button class="chip" data-f="L1" title="English League One">L1</button><button class="chip" data-f="L2" title="English League Two">L2</button><button class="chip" data-f="LALIGA" title="Spain La Liga">LALIGA</button></div>
+
+<h2>Value picks <small>edge 5%–30%, odds 1.55–2.1</small></h2>
+<section class="day"><h3 class="dayh">Today · Tuesday 20 October</h3><div class="grid"><article class="pick " data-league="L1">
+  <div class="pick-top"><span class="lg">L1</span><span class="ko">20:45</span></div>
+  <h3>Oxford v Wigan</h3>
+  <div class="mk">Home win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">2.04</dd><dd class="sub">Betfair Exchange<br>net 1.99</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.54</dd><dd class="sub">model 65%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+29%</dd><dd class="sub">market 48%</dd></div>
+  </dl>
+  <div class="foot">xG 1.91-0.74 · stake 7.3% · 21 bookmaker(s)</div>
+</article><article class="pick " data-league="L2">
+  <div class="pick-top"><span class="lg">L2</span><span class="ko">20:45</span></div>
+  <h3>York v Accrington</h3>
+  <div class="mk">Home win</div>
+  <dl>
+    <div><dt>Best odds</dt><dd class="big">1.77</dd><dd class="sub">Betfair Exchange<br>net 1.73</dd></div>
+    <div><dt>Fair odds</dt><dd class="big">1.63</dd><dd class="sub">model 62%</dd></div>
+    <div><dt>Edge</dt><dd class="big edge">+6%</dd><dd class="sub">market 54%</dd></div>
+  </dl>
+  <div class="foot">xG 2.13-1.06 · stake 2.2% · 20 bookmaker(s)</div>
+</article></div></section>
+
+<h2>Check manually <small>edge above 30%: usually the model is missing team news</small></h2>
+<p class="empty">None.</p>
+
+<h2>All matches <small>tap a match for every market</small></h2>
+<section class="day"><h3 class="dayh">Today · Tuesday 20 October</h3><div class="list"><details class="match" data-league="CHAMP">
+<summary><span class="ko">20:45</span><span class="lgt">CHAMP</span><span class="teams">Wolves v Portsmouth</span>
+<span class="xg">xG 2.08-1.05</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>18%</td><td class=n>5.50</td><td class=n>6.00</td><td>Betfair Exchange</td><td class=n>+4%</td></tr><tr class=''><td>Home win</td><td class=n>61%</td><td class=n>1.65</td><td class=n>1.65</td><td>Betfair Exchange</td><td class=n>-2%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">AFC Wimbledon v Mansfield</span>
+<span class="xg">xG 0.99-1.45</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>48%</td><td class=n>2.11</td><td class=n>2.22</td><td>Betfair Exchange</td><td class=n>+3%</td></tr><tr class=''><td>Home win</td><td class=n>25%</td><td class=n>3.94</td><td class=n>3.50</td><td>Betfair Exchange</td><td class=n>-14%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Blackpool v Milton Keynes Dons</span>
+<span class="xg">xG 1.80-1.10</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>23%</td><td class=n>4.37</td><td class=n>2.78</td><td>Betfair Exchange</td><td class=n>-38%</td></tr><tr class=''><td>Home win</td><td class=n>54%</td><td class=n>1.87</td><td class=n>2.58</td><td>Betfair Exchange</td><td class=n>+34%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Bromley v Leicester</span>
+<span class="xg">xG 1.40-1.79</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>47%</td><td class=n>2.15</td><td class=n>1.76</td><td>Betfair Exchange</td><td class=n>-20%</td></tr><tr class=''><td>Home win</td><td class=n>30%</td><td class=n>3.35</td><td class=n>4.60</td><td>Betfair Exchange</td><td class=n>+32%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Burton v Bradford</span>
+<span class="xg">xG 0.84-1.10</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>41%</td><td class=n>2.44</td><td class=n>2.12</td><td>Betfair Exchange</td><td class=n>-15%</td></tr><tr class=''><td>Home win</td><td class=n>27%</td><td class=n>3.66</td><td class=n>3.90</td><td>Betfair Exchange</td><td class=n>+2%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Cambridge v Wycombe</span>
+<span class="xg">xG 1.57-1.39</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>33%</td><td class=n>2.99</td><td class=n>3.05</td><td>Betfair Exchange</td><td class=n>-2%</td></tr><tr class=''><td>Home win</td><td class=n>42%</td><td class=n>2.40</td><td class=n>2.46</td><td>Betfair Exchange</td><td class=n>-1%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Doncaster v Stockport</span>
+<span class="xg">xG 1.03-1.59</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>50%</td><td class=n>2.00</td><td class=n>1.96</td><td>Betfair Exchange</td><td class=n>-4%</td></tr><tr class=''><td>Home win</td><td class=n>24%</td><td class=n>4.13</td><td class=n>4.00</td><td>Betfair Exchange</td><td class=n>-7%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Huddersfield v Peterboro</span>
+<span class="xg">xG 2.06-1.10</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>20%</td><td class=n>5.14</td><td class=n>5.70</td><td>Betfair Exchange</td><td class=n>+6%</td></tr><tr class=''><td>Home win</td><td class=n>59%</td><td class=n>1.69</td><td class=n>1.57</td><td>Betfair Exchange</td><td class=n>-9%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Luton v Barnsley</span>
+<span class="xg">xG 2.36-1.30</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>20%</td><td class=n>5.03</td><td class=n>6.00</td><td>Betfair Exchange</td><td class=n>+14%</td></tr><tr class=''><td>Home win</td><td class=n>61%</td><td class=n>1.65</td><td class=n>1.58</td><td>Betfair Exchange</td><td class=n>-6%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Notts County v Sheffield Weds</span>
+<span class="xg">xG 0.66-1.94</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>68%</td><td class=n>1.48</td><td class=n>2.28</td><td>Betfair Exchange</td><td class=n>+50%</td></tr><tr class=''><td>Home win</td><td class=n>12%</td><td class=n>8.65</td><td class=n>3.30</td><td>Betfair Exchange</td><td class=n>-63%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Oxford v Wigan</span>
+<span class="xg">xG 1.91-0.74</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>14%</td><td class=n>7.43</td><td class=n>4.00</td><td>Betfair Exchange</td><td class=n>-48%</td></tr><tr class='v'><td>Home win</td><td class=n>65%</td><td class=n>1.54</td><td class=n>2.04</td><td>Betfair Exchange</td><td class=n>+29%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">20:45</span><span class="lgt">L1</span><span class="teams">Stevenage v Plymouth</span>
+<span class="xg">xG 1.17-1.21</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>37%</td><td class=n>2.72</td><td class=n>2.72</td><td>Betfair Exchange</td><td class=n>-3%</td></tr><tr class=''><td>Home win</td><td class=n>35%</td><td class=n>2.87</td><td class=n>2.80</td><td>Betfair Exchange</td><td class=n>-6%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Barnet v Swindon</span>
+<span class="xg">xG 2.27-1.15</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>18%</td><td class=n>5.57</td><td class=n>6.60</td><td>Betfair Exchange</td><td class=n>+13%</td></tr><tr class=''><td>Home win</td><td class=n>62%</td><td class=n>1.60</td><td class=n>1.51</td><td>Betfair Exchange</td><td class=n>-8%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Bristol Rvs v Salford</span>
+<span class="xg">xG 1.22-1.36</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>40%</td><td class=n>2.51</td><td class=n>2.68</td><td>Betfair Exchange</td><td class=n>+3%</td></tr><tr class=''><td>Home win</td><td class=n>33%</td><td class=n>3.02</td><td class=n>2.78</td><td>Betfair Exchange</td><td class=n>-11%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Cheltenham v Fleetwood Town</span>
+<span class="xg">xG 1.35-1.33</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>36%</td><td class=n>2.76</td><td class=n>2.32</td><td>Betfair Exchange</td><td class=n>-18%</td></tr><tr class=''><td>Home win</td><td class=n>37%</td><td class=n>2.69</td><td class=n>3.30</td><td>Betfair Exchange</td><td class=n>+18%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Chesterfield v Colchester</span>
+<span class="xg">xG 1.49-0.98</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>25%</td><td class=n>4.07</td><td class=n>5.60</td><td>Betfair Exchange</td><td class=n>+32%</td></tr><tr class=''><td>Home win</td><td class=n>49%</td><td class=n>2.06</td><td class=n>1.63</td><td>Betfair Exchange</td><td class=n>-22%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Crawley Town v Shrewsbury</span>
+<span class="xg">xG 1.23-1.02</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>30%</td><td class=n>3.31</td><td class=n>2.48</td><td>Betfair Exchange</td><td class=n>-27%</td></tr><tr class=''><td>Home win</td><td class=n>41%</td><td class=n>2.47</td><td class=n>3.05</td><td>Betfair Exchange</td><td class=n>+20%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Exeter v Crewe</span>
+<span class="xg">xG 0.51-0.46</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>24%</td><td class=n>4.07</td><td class=n>2.98</td><td>Betfair Exchange</td><td class=n>-29%</td></tr><tr class=''><td>Home win</td><td class=n>28%</td><td class=n>3.63</td><td class=n>2.68</td><td>Betfair Exchange</td><td class=n>-28%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Northampton v Tranmere</span>
+<span class="xg">xG 0.89-0.60</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>23%</td><td class=n>4.31</td><td class=n>3.45</td><td>Betfair Exchange</td><td class=n>-23%</td></tr><tr class=''><td>Home win</td><td class=n>40%</td><td class=n>2.51</td><td class=n>2.34</td><td>Betfair Exchange</td><td class=n>-9%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Rochdale v Grimsby</span>
+<span class="xg">xG 1.27-1.43</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>41%</td><td class=n>2.46</td><td class=n>2.26</td><td>Betfair Exchange</td><td class=n>-11%</td></tr><tr class=''><td>Home win</td><td class=n>33%</td><td class=n>3.03</td><td class=n>3.35</td><td>Betfair Exchange</td><td class=n>+6%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Rotherham v Newport County</span>
+<span class="xg">xG 1.47-1.40</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>36%</td><td class=n>2.80</td><td class=n>3.40</td><td>Betfair Exchange</td><td class=n>+17%</td></tr><tr class=''><td>Home win</td><td class=n>39%</td><td class=n>2.58</td><td class=n>2.28</td><td>Betfair Exchange</td><td class=n>-14%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">Walsall v Oldham</span>
+<span class="xg">xG 1.33-1.08</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>30%</td><td class=n>3.32</td><td class=n>2.86</td><td>Betfair Exchange</td><td class=n>-17%</td></tr><tr class=''><td>Home win</td><td class=n>42%</td><td class=n>2.39</td><td class=n>2.62</td><td>Betfair Exchange</td><td class=n>+6%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">20:45</span><span class="lgt">L2</span><span class="teams">York v Accrington</span>
+<span class="xg">xG 2.13-1.06</span><span class="badge">1 value</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>18%</td><td class=n>5.62</td><td class=n>4.80</td><td>Betfair Exchange</td><td class=n>-18%</td></tr><tr class='v'><td>Home win</td><td class=n>62%</td><td class=n>1.63</td><td class=n>1.77</td><td>Betfair Exchange</td><td class=n>+6%</td></tr></tbody></table></div></details><details class="match" data-league="L2">
+<summary><span class="ko">21:00</span><span class="lgt">L2</span><span class="teams">Gillingham v Port Vale</span>
+<span class="xg">xG 1.01-0.90</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>31%</td><td class=n>3.24</td><td class=n>2.36</td><td>Betfair Exchange</td><td class=n>-29%</td></tr><tr class=''><td>Home win</td><td class=n>37%</td><td class=n>2.72</td><td class=n>3.40</td><td>Betfair Exchange</td><td class=n>+21%</td></tr></tbody></table></div></details></div></section><section class="day"><h3 class="dayh">Tomorrow · Wednesday 21 October</h3><div class="list"><details class="match" data-league="LALIGA">
+<summary><span class="ko">20:00</span><span class="lgt">LALIGA</span><span class="teams">Levante v Ath Bilbao</span>
+<span class="xg">xG 1.40-1.22</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>32%</td><td class=n>3.13</td><td class=n>2.22</td><td>Betfair Exchange</td><td class=n>-31%</td></tr><tr class=''><td>Home win</td><td class=n>40%</td><td class=n>2.48</td><td class=n>3.75</td><td>Betfair Exchange</td><td class=n>+46%</td></tr></tbody></table></div></details><details class="match" data-league="L1">
+<summary><span class="ko">21:00</span><span class="lgt">L1</span><span class="teams">Reading v Leyton Orient</span>
+<span class="xg">xG 1.76-1.20</span></summary>
+<div class="tw"><table><thead><tr><th>Market</th><th class=n>Model</th><th class=n>Fair</th><th class=n>Best</th>
+<th>Bookmaker</th><th class=n>Edge</th></tr></thead><tbody><tr class=''><td>Away win</td><td class=n>26%</td><td class=n>3.88</td><td class=n>6.20</td><td>Betfair Exchange</td><td class=n>+53%</td></tr><tr class=''><td>Home win</td><td class=n>50%</td><td class=n>1.99</td><td class=n>1.59</td><td>Betfair Exchange</td><td class=n>-22%</td></tr></tbody></table></div></details></div></section>
+
+<h2>Previous days</h2><div class="arch"><a href="2026-10-20.html">2026-10-20</a></div>
+
+<details class="info"><summary>How to read this page</summary>
+<p><b>Fair odds</b> = 1 ÷ model probability. <b>Best odds</b> = Betfair Exchange back price (other bookmakers only feed the market average). The edge uses the price after commission (shown as <b>net</b>); the odds range applies to the quoted price.
+<b>Edge</b> = model probability × best odds (after any commission) − 1. <b>Market</b> = the bookmakers' average price with their margin removed.
+<b>Stake</b> = 0.25 Kelly as % of bankroll, for guidance only. <b>xG</b> = model's expected goals, home–away.
+The model knows nothing about injuries, suspensions or rotation.</p>
+<p>Sources: football-data: ok, 0 matches in window · the-odds-api: 37 matches, 254 credits left · api-football: 0 matches, None requests left today | error: EPL: API-Football /fixtures: {&#x27;plan&#x27;: &#x27;Free plans do not have access to this season, try from 2022 to 2024.&#x27;}</p><ul><li>English FA Cup: no statistical history source yet</li></ul></details>
+</main>
+<script>
+document.querySelectorAll('.chip').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('on',c===b));
+ const f=b.dataset.f;
+ document.querySelectorAll('[data-league]').forEach(el=>{ if(!el.classList.contains('chip')) el.style.display=(f==='all'||el.dataset.league===f)?'':'none'; });
+ document.querySelectorAll('section.day').forEach(sec=>{ sec.style.display=[...sec.querySelectorAll('[data-league]')].some(x=>x.style.display!=='none')?'':'none'; });
+});
+</script></body></html>
